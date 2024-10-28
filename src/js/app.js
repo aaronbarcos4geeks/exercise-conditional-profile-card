@@ -34,13 +34,11 @@ function render(variables = {}) {
   let city = variables.city || "City";
   let country = variables.country || "Country";
 
-  // Posiciona la barra de redes sociales
   let socialMediaPosition =
     variables.socialMediaPosition === "position-left"
       ? "position-left"
       : "position-right";
 
-  // Genera los enlaces de redes sociales solo si se ha proporcionado un valor
   let twitterLink = variables.twitter
     ? `<li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>`
     : "";
@@ -54,7 +52,6 @@ function render(variables = {}) {
     ? `<li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>`
     : "";
 
-  // Genera el HTML dinámico de la tarjeta
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
